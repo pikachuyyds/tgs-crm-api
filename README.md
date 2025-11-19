@@ -43,18 +43,22 @@ php artisan serve
 
 ### API Endpoints
 
--   baseUrl is http://127.0.0.1:8000
+-   baseUrl is http://127.0.0.1:8000/api
 
 1. Register (POST baseUrl/register)
 
 ```git
 Headers: Accept: application/json
+```
+
 Body (JSON):
+
+```json
 {
-  "name": "User3",
-  "email": "user3@example.com",
-  "password": "user123",
-  "password_confirmation": "user123"
+    "name": "User3",
+    "email": "user3@example.com",
+    "password": "user123",
+    "password_confirmation": "user123"
 }
 ```
 
@@ -148,7 +152,7 @@ Headers:
 ### Bonus/Optional Features
 
 -   Pagination
-    -   get customer response per page is 10
+    -   can verify via get customer response per page is 10
 -   JWT token validation
     -   all customer routes require JWT token in Authorization header
 -   Postman files
